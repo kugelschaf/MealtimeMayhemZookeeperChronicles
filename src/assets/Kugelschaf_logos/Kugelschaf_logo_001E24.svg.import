@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kl0ya8c1ga2l"
-path="res://.godot/imported/kugelschaf-logo.png-174267e77abad97c87d19e691cf24f34.ctex"
+uid="uid://nwl5vq21dp1"
+path="res://.godot/imported/Kugelschaf_logo_001E24.svg-0b0eebafb67a03c640fb5df730f307f4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kugelschaf-logo.png"
-dest_files=["res://.godot/imported/kugelschaf-logo.png-174267e77abad97c87d19e691cf24f34.ctex"]
+source_file="res://assets/Kugelschaf_logos/Kugelschaf_logo_001E24.svg"
+dest_files=["res://.godot/imported/Kugelschaf_logo_001E24.svg-0b0eebafb67a03c640fb5df730f307f4.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false
