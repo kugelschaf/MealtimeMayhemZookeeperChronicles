@@ -1,12 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://bt6b34c3nakrc"]
+[gd_scene load_steps=4 format=3 uid="uid://djbesdhsdl5hs"]
 
-[ext_resource type="Texture2D" uid="uid://nwl5vq21dp1" path="res://assets/Kugelschaf_logo_001E24.svg" id="1_wtyh1"]
-[ext_resource type="Texture2D" uid="uid://qi83kvo835dt" path="res://assets/Kugelschaf_text_white.svg" id="2_7efhw"]
+[ext_resource type="Texture2D" uid="uid://nwl5vq21dp1" path="res://assets/Kugelschaf_logos/Kugelschaf_logo_001E24.svg" id="1_wtyh1"]
+[ext_resource type="Texture2D" uid="uid://qi83kvo835dt" path="res://assets/Kugelschaf_logos/Kugelschaf_text_white.svg" id="2_7efhw"]
+[ext_resource type="Script" path="res://scripts/ChangeToMenuScene.gd" id="3_ynesy"]
 
 [node name="Start" type="Node"]
 
 [node name="BG_colour_001E24" type="ColorRect" parent="."]
-anchors_preset = -1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
@@ -44,3 +45,11 @@ offset_bottom = -157.0
 grow_horizontal = 2
 grow_vertical = 0
 texture = ExtResource("2_7efhw")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+autostart = true
+script = ExtResource("3_ynesy")
+
+[connection signal="timeout" from="Timer" to="Timer" method="_OnTimeout"]
