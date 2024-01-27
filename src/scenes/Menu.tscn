@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://coa8iuw6aspxn"]
+[gd_scene load_steps=7 format=3 uid="uid://dr2s84x5dthnp"]
 
 [ext_resource type="Script" path="res://scripts/MenuInputHandler.gd" id="1_app4e"]
+[ext_resource type="Texture2D" path="res://assets/Kugelschaf_logo_001E24.svg" id="2_uctrf"]
+[ext_resource type="Texture2D" path="res://assets/Kugelschaf_text_white.svg" id="3_b3bn7"]
+[ext_resource type="FontFile" uid="uid://doptl0u7pn03n" path="res://assets/fonts/SingleDay-Regular.ttf" id="4_cufxd"]
+[ext_resource type="FontFile" uid="uid://bs3bpoumxj71f" path="res://assets/fonts/JosefinSlab-Regular.ttf" id="5_e6ry4"]
+[ext_resource type="FontFile" uid="uid://bty638gao51ox" path="res://assets/fonts/JosefinSlab-Light.ttf" id="6_fr0pt"]
 
 [node name="Menu" type="Node"]
 script = ExtResource("1_app4e")
@@ -13,23 +18,133 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0.117647, 0.141176, 1)
 
-[node name="Label" type="Label" parent="."]
+[node name="Kugelschaf" type="Control" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+grow_vertical = 0
+
+[node name="KugelschafLogo" type="TextureRect" parent="ColorRect/Kugelschaf"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = -84.0
+offset_right = 92.0
+offset_bottom = -13.0
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = ExtResource("2_uctrf")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect/Kugelschaf"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 101.0
+offset_top = -51.0
+offset_right = 308.0
+offset_bottom = -28.0
+grow_vertical = 0
+texture = ExtResource("3_b3bn7")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="StartButton" type="MenuButton" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -8.0
+offset_right = 76.0
+offset_bottom = 61.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_cufxd")
+theme_override_font_sizes/font_size = 60
+text = "Start"
+
+[node name="CreditsButton" type="MenuButton" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = 87.0
+offset_right = 76.0
+offset_bottom = 140.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_e6ry4")
+theme_override_font_sizes/font_size = 30
+text = "Credits"
+
+[node name="EndGameButton" type="MenuButton" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = 154.0
+offset_right = 76.0
+offset_bottom = 201.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_e6ry4")
+theme_override_font_sizes/font_size = 30
+text = "Close Game"
+
+[node name="Title" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1003.0
+offset_top = 63.0
+offset_right = -3.0
+offset_bottom = 263.0
+grow_horizontal = 0
+scale = Vector2(0.9, 0.9)
+
+[node name="Zookeeper" type="Label" parent="Title"]
+layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -69.5
-offset_top = 100.0
-offset_right = 69.5
-offset_bottom = 169.0
+offset_left = -338.0
+offset_top = 93.0
+offset_right = 181.0
+offset_bottom = 164.0
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 50
-text = "Menu"
+theme_override_fonts/font = ExtResource("6_fr0pt")
+theme_override_font_sizes/font_size = 60
+text = "Zookeeper Chronicles"
+horizontal_alignment = 1
 
-[node name="MenuButton" type="MenuButton" parent="."]
-offset_left = 508.0
-offset_top = 225.0
-offset_right = 679.0
-offset_bottom = 294.0
-text = "Start"
+[node name="Mealtime" type="Label" parent="Title"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -414.0
+offset_top = -2.0
+offset_right = 415.0
+offset_bottom = 119.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("4_cufxd")
+theme_override_font_sizes/font_size = 120
+text = "Mealtime Mayhem:"
+horizontal_alignment = 1
 
-[connection signal="pressed" from="MenuButton" to="." method="_OnStartGameButtonPressed"]
+[connection signal="pressed" from="StartButton" to="." method="_OnStartGameButtonPressed"]
+[connection signal="pressed" from="CreditsButton" to="." method="_OnStartGameButtonPressed"]
+[connection signal="pressed" from="EndGameButton" to="." method="_OnStartGameButtonPressed"]
