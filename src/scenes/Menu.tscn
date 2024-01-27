@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://dr2s84x5dthnp"]
 
 [ext_resource type="Script" path="res://scripts/MenuInputHandler.gd" id="1_app4e"]
-[ext_resource type="Texture2D" path="res://assets/Kugelschaf_logo_001E24.svg" id="2_uctrf"]
-[ext_resource type="Texture2D" path="res://assets/Kugelschaf_text_white.svg" id="3_b3bn7"]
+[ext_resource type="Texture2D" uid="uid://nwl5vq21dp1" path="res://assets/Kugelschaf_logos/Kugelschaf_logo_001E24.svg" id="2_uctrf"]
+[ext_resource type="Texture2D" uid="uid://qi83kvo835dt" path="res://assets/Kugelschaf_logos/Kugelschaf_text_white.svg" id="3_b3bn7"]
 [ext_resource type="FontFile" uid="uid://doptl0u7pn03n" path="res://assets/fonts/SingleDay-Regular.ttf" id="4_cufxd"]
 [ext_resource type="FontFile" uid="uid://bs3bpoumxj71f" path="res://assets/fonts/JosefinSlab-Regular.ttf" id="5_e6ry4"]
 [ext_resource type="FontFile" uid="uid://bty638gao51ox" path="res://assets/fonts/JosefinSlab-Light.ttf" id="6_fr0pt"]
@@ -146,5 +146,5 @@ text = "Mealtime Mayhem:"
 horizontal_alignment = 1
 
 [connection signal="pressed" from="StartButton" to="." method="_OnStartGameButtonPressed"]
-[connection signal="pressed" from="CreditsButton" to="." method="_OnStartGameButtonPressed"]
-[connection signal="pressed" from="EndGameButton" to="." method="_OnStartGameButtonPressed"]
+[connection signal="pressed" from="CreditsButton" to="." method="_OnShowCreditsButtonPressed"]
+[connection signal="pressed" from="EndGameButton" to="." method="_OnCloseGameButtonPressed"]
