@@ -1,0 +1,8 @@
+visual | pixel_nature.png Deeppixel | CC0 | https://opengameart.org/content/mountain-hause-and-trees
+visual | Tiles_nature.png SMHeyne | CC0 | Tree trunks + gravel path
+visual | tileset.png Buch | CC0 | http://blog-buch.rhcloud.com
+visual | kenney_animal-pack-redux | CC0 | https://kenney.nl/assets/map-pack
+visual | Roguelike/RPG pack | CC0 | https://kenney.nl/assets/roguelike-rpg-pack
+visual | Animal Pack Redux | CC0 | https://kenney.nl/assets/animal-pack-redux
+visual | Pixel UI Pack CC0 | https://kenney.nl/assets/pixel-ui-pack
+visual | Block Pack | CC0 | https://kenney.nl/assets/block-pack
