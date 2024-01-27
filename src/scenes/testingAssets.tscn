@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bods484plibyd"]
+
+[ext_resource type="TileSet" uid="uid://1g80fheu8p7h" path="res://assets/tilemaps/16_16_groundTiles.tres" id="1_r3c1r"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("1_r3c1r")
+format = 2
+layer_0/tile_data = PackedInt32Array(65536, 589824, 4, 131074, 393216, 3, 131075, 327680, 3)
