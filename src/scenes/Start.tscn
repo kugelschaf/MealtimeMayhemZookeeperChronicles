@@ -1,27 +1,46 @@
-[gd_scene load_steps=2 format=3 uid="uid://djbesdhsdl5hs"]
+[gd_scene load_steps=3 format=3 uid="uid://bt6b34c3nakrc"]
 
-[ext_resource type="Texture2D" uid="uid://kl0ya8c1ga2l" path="res://assets/kugelschaf-logo.png" id="1_xrgdk"]
+[ext_resource type="Texture2D" uid="uid://nwl5vq21dp1" path="res://assets/Kugelschaf_logo_001E24.svg" id="1_wtyh1"]
+[ext_resource type="Texture2D" uid="uid://qi83kvo835dt" path="res://assets/Kugelschaf_text_white.svg" id="2_7efhw"]
 
 [node name="Start" type="Node"]
 
-[node name="ColorRect" type="ColorRect" parent="."]
-anchors_preset = 15
+[node name="BG_colour_001E24" type="ColorRect" parent="."]
+anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 color = Color(0, 0.117235, 0.141176, 1)
 
-[node name="TextureRect" type="TextureRect" parent="."]
-anchors_preset = 8
+[node name="KugelschafLogo" type="TextureRect" parent="BG_colour_001E24"]
+layout_mode = 1
+anchors_preset = 5
 anchor_left = 0.5
-anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -190.5
-offset_top = -296.275
-offset_right = 190.5
-offset_bottom = 84.7251
+offset_left = -200.0
+offset_right = 200.0
+offset_bottom = 400.0
 grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("1_xrgdk")
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = ExtResource("1_wtyh1")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="TextureRect" type="TextureRect" parent="BG_colour_001E24"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -402.5
+offset_top = -248.0
+offset_right = 402.5
+offset_bottom = -157.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("2_7efhw")
