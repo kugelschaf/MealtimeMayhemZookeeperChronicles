@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://djbesdhsdl5hs"]
+
+[ext_resource type="Texture2D" uid="uid://kl0ya8c1ga2l" path="res://assets/kugelschaf-logo.png" id="1_xrgdk"]
+
+[node name="Start" type="Node"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.117235, 0.141176, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -190.5
+offset_top = -296.275
+offset_right = 190.5
+offset_bottom = 84.7251
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_xrgdk")
