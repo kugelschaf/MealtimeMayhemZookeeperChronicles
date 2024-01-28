@@ -23,7 +23,7 @@ shape = SubResource("CapsuleShape2D_cp1wg")
 debug_color = Color(0.788235, 0.329412, 0.717647, 0.419608)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(1.57, 1.57)
+zoom = Vector2(8, 8)
 
 [node name="PlayerInteractionArea" type="Area2D" parent="."]
 

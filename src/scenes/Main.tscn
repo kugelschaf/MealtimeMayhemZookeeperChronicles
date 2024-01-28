@@ -1,8 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bed7rmps6ph8"]
+[gd_scene load_steps=6 format=3 uid="uid://dkbo2sokauvr7"]
 
 [ext_resource type="TileSet" uid="uid://1g80fheu8p7h" path="res://assets/tilemaps/16_16_groundTiles.tres" id="1_q6fpw"]
 [ext_resource type="PackedScene" uid="uid://cqcps2kr6hxvy" path="res://entities/Player.tscn" id="2_4xivr"]
-[ext_resource type="Texture2D" path="res://assets/UI/UIpackSheet_magenta.png" id="3_6d81y"]
+[ext_resource type="Texture2D" uid="uid://duximcpbloi4w" path="res://assets/UI/UIpackSheet_magenta.png" id="3_6d81y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mydwv"]
 texture = ExtResource("3_6d81y")
@@ -1047,6 +1047,7 @@ sources/2 = SubResource("TileSetAtlasSource_mydwv")
 [node name="Main" type="Node2D"]
 
 [node name="GroundTiles_16_16" type="TileMap" parent="."]
+texture_filter = 1
 position = Vector2(-95, -100)
 tile_set = ExtResource("1_q6fpw")
 format = 2
@@ -1076,6 +1077,7 @@ layer_7/tile_data = PackedInt32Array(2490407, 720898, 1, 2490414, 720898, 2, 249
 
 [node name="Player" parent="." instance=ExtResource("2_4xivr")]
 z_index = 10
+texture_filter = 1
 position = Vector2(400.338, 225.105)
 scale = Vector2(0.69, 0.69)
 
