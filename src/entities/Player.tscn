@@ -27,6 +27,6 @@ zoom = Vector2(8, 8)
 
 [node name="PlayerInteractionArea" type="Area2D" parent="."]
 
-[node name="CollisionShape" type="CollisionShape2D" parent="PlayerInteractionArea"]
+[node name="PlayerInteractionCollisionShape" type="CollisionShape2D" parent="PlayerInteractionArea"]
 position = Vector2(0, 18)
 shape = SubResource("CapsuleShape2D_umjqs")

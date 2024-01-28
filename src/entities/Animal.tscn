@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cukqsxvn10p16"]
 
-[ext_resource type="SpriteFrames" path="res://assets/animations/animals.tres" id="1_cgopq"]
+[ext_resource type="SpriteFrames" uid="uid://cmhetqpm31mp7" path="res://assets/animations/animals.tres" id="1_cgopq"]
 [ext_resource type="Script" path="res://scripts/AnimalInputHandler.gd" id="1_gjgwc"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dlxa4"]
