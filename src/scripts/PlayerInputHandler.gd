@@ -89,19 +89,23 @@ func PlayAnimation(type: AnimationType, direction: CompasDirection):
 
 func TryInteractWithNearestEntity():
 	var interactionArea: Area2D = $PlayerInteractionArea
+	
+	# set interaction area to the direction where the player
+	#  is looking/walkin before checking for nearby entities
 	interactionArea.rotation = ConvertWalkingDirectionToAngle(WalkingDirection)
-
+	
 	var bodies = interactionArea.get_overlapping_bodies()
-		
+	print_debug("Bodies found: ", bodies)
+
 	for body in bodies:
 		if body == self:
 			continue
-		
-		if (body.has_method("PrimaryAction")):
+
+		if body.has_method("PrimaryAction"):
 			body.call("PrimaryAction")
 			return true
 		
-	print_debug("Found no entity to interact with.")
+	print_debug("No entity found to interact with.")
 	return false
 
 func OpenMap():
