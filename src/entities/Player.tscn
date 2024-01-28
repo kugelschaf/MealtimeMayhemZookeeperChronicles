@@ -1,19 +1,33 @@
-[gd_scene load_steps=4 format=3 uid="uid://cqcps2kr6hxvy"]
+[gd_scene load_steps=5 format=3 uid="uid://cqcps2kr6hxvy"]
 
 [ext_resource type="Script" path="res://scripts/PlayerInputHandler.gd" id="1_62t57"]
 [ext_resource type="SpriteFrames" uid="uid://dhm6lv5pcus6u" path="res://assets/animations/player.tres" id="2_jmayf"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_c1xol"]
-size = Vector2(128, 128)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cp1wg"]
+radius = 11.5
+height = 35.0
 
-[node name="Player" type="RigidBody2D"]
-gravity_scale = 0.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_umjqs"]
+radius = 10.0
+height = 26.0
+
+[node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_62t57")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="PlayerSpriteAnimation" type="AnimatedSprite2D" parent="."]
 sprite_frames = ExtResource("2_jmayf")
+animation = &"WALK-SOUTH"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_c1xol")
+[node name="PlayerPhysicsCollisionArea" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_cp1wg")
+debug_color = Color(0.788235, 0.329412, 0.717647, 0.419608)
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.57, 1.57)
+
+[node name="PlayerInteractionArea" type="Area2D" parent="."]
+
+[node name="CollisionShape" type="CollisionShape2D" parent="PlayerInteractionArea"]
+position = Vector2(0, 18)
+scale = Vector2(1, 1)
+shape = SubResource("CapsuleShape2D_umjqs")
