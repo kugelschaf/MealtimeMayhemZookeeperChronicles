@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://bryit0r8f0j2m"]
+
+[ext_resource type="Script" path="res://scripts/CartInputHandler.gd" id="1_6elhq"]
+[ext_resource type="Texture2D" uid="uid://b8nmlqo12rp1t" path="res://icon.svg" id="1_7clox"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6i1ou"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7clox")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cgt2v"]
+size = Vector2(128, 256)
+
+[node name="Cart" type="CharacterBody2D"]
+script = ExtResource("1_6elhq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+rotation = -3.14159
+scale = Vector2(1, 2)
+sprite_frames = SubResource("SpriteFrames_6i1ou")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_cgt2v")
