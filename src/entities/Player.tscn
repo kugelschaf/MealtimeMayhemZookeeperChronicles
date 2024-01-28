@@ -4,11 +4,10 @@
 [ext_resource type="SpriteFrames" uid="uid://dhm6lv5pcus6u" path="res://assets/animations/player.tres" id="2_jmayf"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cp1wg"]
-radius = 11.5
-height = 35.0
+radius = 7.0
+height = 14.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_umjqs"]
-radius = 10.0
 height = 26.0
 
 [node name="Player" type="CharacterBody2D"]
@@ -19,6 +18,7 @@ sprite_frames = ExtResource("2_jmayf")
 animation = &"WALK-SOUTH"
 
 [node name="PlayerPhysicsCollisionArea" type="CollisionShape2D" parent="."]
+position = Vector2(0, 12)
 shape = SubResource("CapsuleShape2D_cp1wg")
 debug_color = Color(0.788235, 0.329412, 0.717647, 0.419608)
 
@@ -29,5 +29,4 @@ zoom = Vector2(1.57, 1.57)
 
 [node name="CollisionShape" type="CollisionShape2D" parent="PlayerInteractionArea"]
 position = Vector2(0, 18)
-scale = Vector2(1, 1)
 shape = SubResource("CapsuleShape2D_umjqs")

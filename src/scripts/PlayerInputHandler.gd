@@ -1,16 +1,17 @@
 extends CharacterBody2D
 
-const PI_4TH = PI / 4
-@export var MovementSpeed = 40
+const PI_FOURTH = PI / 4
+const PI_HALF = PI / 2
 
-var CurrentInputHandler = DefaultInputHandler;
-var WalkingDirection = CompasDirection.SOUTH
+@export var MovementSpeed = 60
+@export var WalkingDirection = CompasDirection.SOUTH
 
 enum AnimationType
 {
 	IDLE,
 	WALK
 }
+
 
 enum CompasDirection 
 {
@@ -24,6 +25,7 @@ enum CompasDirection
 	NORTH_EAST = -3,
 }
 
+
 func IsPrimaryActionJustPressed():
 	return Input.is_action_just_pressed("PrimaryAction")
 
@@ -33,10 +35,13 @@ func IsSecondaryActionJustPressed():
 
 
 func _process(delta):
-	CurrentInputHandler.call(delta)
+	if IsPrimaryActionJustPressed():
+		TryInteractWithNearestEntity()
+		
+	if IsSecondaryActionJustPressed():
+		OpenMap()
 
-
-func DefaultInputHandler(delta):
+func _physics_process(delta):		
 	var direction = Input.get_vector(
 		"WalkLeft",  # negative X
 		"WalkRight", # positive X
@@ -44,33 +49,7 @@ func DefaultInputHandler(delta):
 		"WalkDown")  # positive Y
 
 	var directionIsDefined = direction.length() > 0
-	
-	if IsPrimaryActionJustPressed():
-		var interactionArea: Area2D = $PlayerInteractionArea
-		#interactionArea.transform.set_rotation(direction.angle())
-		var bodies = interactionArea.get_overlapping_bodies()
-		
-		var interacted = false
-		for body in bodies:
-			if body == self:
-				continue
-			
-			if (body.has_method("PrimaryAction")):
-				body.call("PrimaryAction")
-				interacted = true
-				break;
-		
-		if not interacted:
-			print_debug("Found no body to interact with")
-	
-	if IsSecondaryActionJustPressed():
-		$PlayerInteractionArea.set_
-		
-		#print("Open Map")
-		# TODO: open map
-		#CurrentInputHandler = MapOpenInputHandler
-		return
-	
+
 	if directionIsDefined:
 		var _velocity = MovementSpeed * direction;
 		
@@ -81,9 +60,10 @@ func DefaultInputHandler(delta):
 	else:
 		PlayAnimation(AnimationType.IDLE, WalkingDirection)
 
+
 func ConvertToCompasDirection(direction: Vector2) -> CompasDirection: 
 	var angle = direction.angle()
-	var discreteAngle = snappedf(angle / (PI / 4), 1)
+	var discreteAngle = snappedf(angle / PI_FOURTH, 1)
 	
 	if discreteAngle == -4:
 		discreteAngle = 4
@@ -95,13 +75,35 @@ func ConvertToCompasDirection(direction: Vector2) -> CompasDirection:
 
 	return discreteAngle
 
+
+func ConvertWalkingDirectionToAngle(direction: CompasDirection) -> float:
+	return direction * PI_FOURTH - PI_HALF
+
+
 func PlayAnimation(type: AnimationType, direction: CompasDirection):
 	var animationName = AnimationType.keys()[type] + "-" + \
 						CompasDirection.keys()[direction]
 	
 	$PlayerSpriteAnimation.play(animationName)
 
-func MapOpenInputHandler(delta):
-	# TODO: implement map
-	print_debug("Map not implemented yet!")
-	CurrentInputHandler = DefaultInputHandler
+
+func TryInteractWithNearestEntity():
+	var interactionArea: Area2D = $PlayerInteractionArea
+	interactionArea.rotation = ConvertWalkingDirectionToAngle(WalkingDirection)
+
+	var bodies = interactionArea.get_overlapping_bodies()
+		
+	for body in bodies:
+		if body == self:
+			continue
+		
+		if (body.has_method("PrimaryAction")):
+			body.call("PrimaryAction")
+			return true
+		
+	print_debug("Found no entity to interact with.")
+	return false
+
+func OpenMap():
+	print_verbose("Open map")
+	push_warning("TODO: Not implemented yet")
