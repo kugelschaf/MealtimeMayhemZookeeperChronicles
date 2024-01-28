@@ -13,8 +13,9 @@ This is our contribution for the finnish game jam 2024 (see https://globalgameja
 - Sabine M. Heyne @smheyne
 - Dominik Viererbe @dviererbe
 
-## License
+## Licenses
 
+Mealtime Mayhem: Zookeeper Chronicles    
 Copyright (C) 2024 Kugelschaf
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or *(at your option)* any later version.
@@ -22,3 +23,27 @@ This program is free software: you can redistribute it and/or modify it under th
 This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more details.
 
 You should have received a copy of the GNU Affero General Public License along with this program. If not, see <<https://www.gnu.org/licenses/>>.
+
+### Kugelschaf brand design
+
+The files associated with our organisation can not be used. This includes the following files:
+
+- `src\assets\Kugelschaf_logos\kugelschaf-logo.png`
+- `src\assets\Kugelschaf_logos\Kugelschaf_text_white.svg`
+- `src\assets\Kugelschaf_logos\Kugelschaf_logo_001E24.svg`
+
+### 3rd party assets
+This project uses third party assets, that do not fall under the license stated above.  Please check out there respective licenses.
+
+- Player character  
+  "8-Direction Top-Down Character Sprites" by BossNelNel  
+  https://bossnelnel.itch.io/8-direction-top-down-character-sprites
+
+- environment | Roguelike/RPG pack | CC0 | https://kenney.nl/assets/roguelike-rpg-pack
+- UI | Pixel UI Pack | CC0 | https://kenney.nl/assets/pixel-ui-pack
+- animals | Animal Pack Redux | CC0 | https://kenney.nl/assets/animal-pack-redux
+
+CC0 → https://creativecommons.org/public-domain/cc0/
+
+
+
