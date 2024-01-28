@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bimbgtmtlo06o"]
+
+[ext_resource type="SpriteFrames" uid="uid://cmhetqpm31mp7" path="res://assets/animations/animals.tres" id="1_cgopq"]
+[ext_resource type="Script" path="res://scripts/AnimalInputHandler.gd" id="1_gjgwc"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dlxa4"]
+radius = 69.0
+height = 184.0
+
+[node name="Animal" type="CharacterBody2D"]
+script = ExtResource("1_gjgwc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_cgopq")
+animation = &"bear"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("CapsuleShape2D_dlxa4")

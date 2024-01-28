@@ -1,0 +1,32 @@
+[gd_resource type="SpriteFrames" load_steps=4 format=3 uid="uid://cmhetqpm31mp7"]
+
+[ext_resource type="Texture2D" uid="uid://dagvovcavcw5y" path="res://assets/kenney_animal-pack-redux/PNG/Round (outline)/bear.png" id="1_rtuxs"]
+[ext_resource type="Texture2D" uid="uid://c2wt1eox616hq" path="res://assets/kenney_animal-pack-redux/PNG/Round (outline)/buffalo.png" id="2_kb6qh"]
+[ext_resource type="Texture2D" uid="uid://evesy6hi41t5" path="res://assets/kenney_animal-pack-redux/PNG/Round (outline)/rabbit.png" id="3_0ydsb"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_rtuxs")
+}],
+"loop": true,
+"name": &"bear",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_kb6qh")
+}],
+"loop": true,
+"name": &"buffalo",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_0ydsb")
+}],
+"loop": true,
+"name": &"rabbit",
+"speed": 5.0
+}]
