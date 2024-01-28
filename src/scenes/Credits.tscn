@@ -1,9 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://x8jrf5xnt5ri"]
+[gd_scene load_steps=9 format=3 uid="uid://du2elcy1wuah3"]
 
 [ext_resource type="Script" path="res://scripts/MenuInputHandler.gd" id="1_mwji5"]
 [ext_resource type="FontFile" uid="uid://bty638gao51ox" path="res://assets/fonts/JosefinSlab-Light.ttf" id="2_qq6mx"]
 [ext_resource type="FontFile" uid="uid://doptl0u7pn03n" path="res://assets/fonts/SingleDay-Regular.ttf" id="3_veehn"]
 [ext_resource type="FontFile" uid="uid://bs3bpoumxj71f" path="res://assets/fonts/JosefinSlab-Regular.ttf" id="4_mkumv"]
+[ext_resource type="FontFile" uid="uid://baqwkvj0i3k5p" path="res://assets/fonts/JosefinSlab-Bold.ttf" id="4_pdk61"]
+[ext_resource type="Texture2D" uid="uid://csvhha23ooiup" path="res://assets/UI/backArrow.svg" id="5_t74ly"]
+[ext_resource type="Texture2D" uid="uid://dr8a1wniq0umm" path="res://assets/UI/buttonBorder.png" id="7_jpx32"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_efhwl"]
 
 [node name="Credits" type="Node"]
 script = ExtResource("1_mwji5")
@@ -21,12 +26,12 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -1003.0
-offset_top = 63.0
-offset_right = -3.0
-offset_bottom = 263.0
+offset_left = -1139.0
+offset_top = 18.0
+offset_right = -139.0
+offset_bottom = 218.0
 grow_horizontal = 0
-scale = Vector2(0.9, 0.9)
+scale = Vector2(0.327835, 0.327835)
 
 [node name="Zookeeper" type="Label" parent="ColorRect/Title"]
 layout_mode = 1
@@ -58,20 +63,160 @@ theme_override_font_sizes/font_size = 120
 text = "Mealtime Mayhem:"
 horizontal_alignment = 1
 
+[node name="Credits" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -414.0
+offset_top = 54.0
+offset_right = 415.0
+offset_bottom = 175.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_veehn")
+theme_override_font_sizes/font_size = 100
+text = "Credits"
+horizontal_alignment = 1
+
+[node name="Team" type="Label" parent="ColorRect/Credits"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -414.5
+offset_top = 130.0
+offset_right = 414.5
+offset_bottom = 251.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_veehn")
+theme_override_font_sizes/font_size = 50
+text = "Team"
+horizontal_alignment = 1
+
+[node name="Dev" type="Label" parent="ColorRect/Credits/Team"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -299.5
+offset_top = 73.575
+offset_right = 0.5
+offset_bottom = 173.575
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("4_pdk61")
+theme_override_font_sizes/font_size = 25
+text = "Developer
+"
+
+[node name="DV" type="Label" parent="ColorRect/Credits/Team/Dev"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.0
+offset_top = 40.0
+offset_right = 50.0
+offset_bottom = 90.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("4_mkumv")
+theme_override_font_sizes/font_size = 25
+text = "Dominik Viererbe"
+
+[node name="Designer" type="Label" parent="ColorRect/Credits/Team"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 127.5
+offset_top = 73.575
+offset_right = 427.5
+offset_bottom = 173.575
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("4_pdk61")
+theme_override_font_sizes/font_size = 25
+text = "Game Designer
+"
+
+[node name="Name" type="Label" parent="ColorRect/Credits/Team/Designer"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.0
+offset_top = 40.0
+offset_right = 50.0
+offset_bottom = 90.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("4_mkumv")
+theme_override_font_sizes/font_size = 25
+text = "Sabine M. Heyne"
+
+[node name="Assets" type="Label" parent="ColorRect/Credits"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -414.5
+offset_top = 319.0
+offset_right = 414.5
+offset_bottom = 440.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_veehn")
+theme_override_font_sizes/font_size = 50
+text = "Other Assets"
+horizontal_alignment = 1
+
+[node name="Designer2" type="Label" parent="ColorRect/Credits/Assets"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -510.5
+offset_top = 61.0
+offset_right = -210.5
+offset_bottom = 161.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("4_pdk61")
+theme_override_font_sizes/font_size = 25
+text = "Kennys...
+"
+
+[node name="Name" type="Label" parent="ColorRect/Credits/Assets/Designer2"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.0
+offset_top = 40.0
+offset_right = 50.0
+offset_bottom = 90.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("4_mkumv")
+theme_override_font_sizes/font_size = 25
+text = "aadd"
+
 [node name="BackButton" type="MenuButton" parent="."]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -76.0
-offset_top = 154.0
-offset_right = 76.0
-offset_bottom = 201.0
+offset_left = -524.0
+offset_top = 240.0
+offset_right = -372.0
+offset_bottom = 287.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("4_mkumv")
 theme_override_font_sizes/font_size = 30
+button_group = SubResource("ButtonGroup_efhwl")
 text = "back"
+icon = ExtResource("5_t74ly")
+alignment = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="BackButton"]
+position = Vector2(61, 21)
+scale = Vector2(0.32816, 0.32816)
+texture = ExtResource("7_jpx32")
 
 [connection signal="pressed" from="BackButton" to="." method="_OnBackButtonPressed"]
