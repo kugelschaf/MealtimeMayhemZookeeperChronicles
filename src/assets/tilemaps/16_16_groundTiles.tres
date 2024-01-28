@@ -1,6 +1,24 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://1g80fheu8p7h"]
+[gd_resource type="TileSet" load_steps=9 format=3 uid="uid://1g80fheu8p7h"]
 
 [ext_resource type="Texture2D" uid="uid://ba06icgo52adt" path="res://assets/kenney_roguelike-rpg-pack/Spritesheet/roguelikeSheet_transparent.png" id="1_xuha1"]
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_va67l"]
+tile_data = PackedInt32Array(0, 851970, 10, 65536, 851970, 11)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_gx4e4"]
+tile_data = PackedInt32Array(0, 917506, 10, 65536, 917506, 11)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_1qhiy"]
+tile_data = PackedInt32Array(0, 1048578, 10, 65536, 1048578, 11)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_8xchk"]
+tile_data = PackedInt32Array(0, 983042, 10, 65536, 983042, 11)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_tdc11"]
+tile_data = PackedInt32Array(0, 1114114, 10, 65536, 1114114, 11)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_f7o1r"]
+tile_data = PackedInt32Array(0, 1179650, 10, 65536, 1179650, 11)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i2fcm"]
 texture = ExtResource("1_xuha1")
@@ -1706,3 +1724,9 @@ separation = Vector2i(1, 1)
 
 [resource]
 sources/2 = SubResource("TileSetAtlasSource_i2fcm")
+pattern_0 = SubResource("TileMapPattern_va67l")
+pattern_1 = SubResource("TileMapPattern_gx4e4")
+pattern_2 = SubResource("TileMapPattern_1qhiy")
+pattern_3 = SubResource("TileMapPattern_8xchk")
+pattern_4 = SubResource("TileMapPattern_tdc11")
+pattern_5 = SubResource("TileMapPattern_f7o1r")
