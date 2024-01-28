@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://du2elcy1wuah3"]
+[gd_scene load_steps=9 format=3 uid="uid://x8jrf5xnt5ri"]
 
 [ext_resource type="Script" path="res://scripts/MenuInputHandler.gd" id="1_mwji5"]
 [ext_resource type="FontFile" uid="uid://bty638gao51ox" path="res://assets/fonts/JosefinSlab-Light.ttf" id="2_qq6mx"]

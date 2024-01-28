@@ -2,8 +2,8 @@
 
 [ext_resource type="TileSet" uid="uid://1g80fheu8p7h" path="res://assets/tilemaps/16_16_groundTiles.tres" id="1_r3c1r"]
 [ext_resource type="PackedScene" uid="uid://cqcps2kr6hxvy" path="res://entities/Player.tscn" id="2_ypr3t"]
-[ext_resource type="PackedScene" uid="uid://bryit0r8f0j2m" path="res://entities/Cart.tscn" id="3_8i1fk"]
-[ext_resource type="PackedScene" uid="uid://bimbgtmtlo06o" path="res://entities/Animal.tscn" id="4_ryt1q"]
+[ext_resource type="PackedScene" uid="uid://vfsv3x3pfyyn" path="res://entities/Cart.tscn" id="3_8i1fk"]
+[ext_resource type="PackedScene" uid="uid://cukqsxvn10p16" path="res://entities/Animal.tscn" id="4_ryt1q"]
 [ext_resource type="PackedScene" uid="uid://dnktcihoff0l0" path="res://entities/AnimalFeedingPoint.tscn" id="5_fe311"]
 
 [node name="Node2D" type="Node2D"]
